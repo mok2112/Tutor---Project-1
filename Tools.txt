@@ -1,0 +1,19 @@
+# Create, activate & deactivate new virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+deactivate
+
+# cmd 
+1. list folder: ls -l
+2. (absolute) move to folder/ change directory: cd + path ---> cd '/Users/thuhuongle/Documents/Tutor - Project 1/notebook' 
+3. (relative) change directory: cd .. 
+
+# Read VS Code
+https://code.visualstudio.com/docs/python/environments
+
+# Draw io
+draw.io
+
+
+
+

@@ -1,0 +1,30 @@
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    container_name: pinkFlamingosContainer
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=superSecretPassword
+      - MYSQL_DATABASE=pinkFlamingosDatabase
+    volumes:
+      - myapp:/var/lib/mysql 
+  mysql-workbench:
+    image: lscr.io/linuxserver/mysql-workbench:latest
+    container_name: mysql-workbench
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - mysql:/config
+    ports:
+      - 3000:3000
+      - 3001:3001
+    cap_add:
+      - IPC_LOCK
+    restart: unless-stopped
+volumes: 
+  myapp:
+  mysql:

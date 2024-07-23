@@ -1,0 +1,21 @@
+# Docker
+docker run -p 8888:8888 jupyter/datascience-notebook:latest 
+-> to download images "jupyter/datascience-notebook" with tags "latest" as the version (default)
+
+docker run -p 8888:8888 -d jupyter/datascience-notebook:latest 
+(detached mode: chay dang sau background, khong hien log files. Neu k co -d thi k chay terminal dc)
+
+docker run -p 8888:8888 --name jupyterlabmok jupyter/datascience-notebook:latest
+(-n de dat ten cho container)
+
+docker run -p 8888:8888 -v ${PWD}/scripts:/home/jovyan -d jupyter/datascience-notebook
+PWD: working directory -> xem hien tai dang o dau roi chuyen den folder can luu tru du lieu, scripts,..
+vdu tren chuyen data ben trong container la /home/jovyan tren port 8888
+-> den duong dan ${PWD}/scripts o tren host (vdu local machine)
+
+Build images
+docker build -t thuhle/streamlit:test .
+(thuhuongle: username, streatlit: image name, test: version, dau ".": vi tri cua file Dockerfile)
+
+docker push thuhle/streamlit:test
+(to push docker image to docker hub)

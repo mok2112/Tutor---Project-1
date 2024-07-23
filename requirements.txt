@@ -1,0 +1,9 @@
+mysql-connector-python
+python-dotenv
+python-arango
+sqlalchemy
+pandas
+mysql-connector
+pymysql
+plotly
+nbformat
