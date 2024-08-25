@@ -7,7 +7,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 def main():
-    data = pd.read_csv('data/Financial Consumer Complaints_new.csv')
+    data = pd.read_csv('Financial Consumer Complaints_new.csv')
 
     st.set_page_config(
         page_title="Customer Complaints",
