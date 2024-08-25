@@ -7,8 +7,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 def main():
-    data = pd.read_csv('./Financial Consumer Complaints_new.csv')
-
     st.set_page_config(
         page_title="Customer Complaints",
         page_icon="🧊",
@@ -20,6 +18,14 @@ def main():
             'About': "# This is a header. This is an *extremely* cool app!"
         }
     )
+    
+    uploaded_file = st.file_uploader("Choose a file") 
+    if uploaded_file is not None:
+        data = pd.read_csv(uploaded_file)
+    else:
+        return
+        #data = pd.read_csv('./Financial Consumer Complaints_new.csv')
+
 
     css = '''
     <style>
