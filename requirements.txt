@@ -7,3 +7,4 @@ mysql-connector
 pymysql
 plotly
 nbformat
+streamlit_date_picker

@@ -5,4 +5,4 @@ RUN pip3 install -r requirements.txt
 EXPOSE 8501
 COPY . /app
 ENTRYPOINT [ "streamlit", "run" ]
-CMD ["create an image_streamlit.py"]
+CMD ["image_streamlit.py"]

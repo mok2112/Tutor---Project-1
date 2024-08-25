@@ -1,0 +1,4 @@
+pandas
+streamlit
+streamlit_date_picker 
+plotly
